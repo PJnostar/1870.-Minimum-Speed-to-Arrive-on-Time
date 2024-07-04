@@ -4,7 +4,7 @@ import math
 import random
 
 dist = [1,3,2]
-hours = 6
+hours = 2.7
 
 dist2 = [random.randint(1, 10) for i in range(10)]
 hours2 = 14

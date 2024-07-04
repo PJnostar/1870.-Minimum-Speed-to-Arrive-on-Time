@@ -21,16 +21,16 @@ class Solution(object):
         
         minspeed = 1
         maxspeed = pow(10,7)
-        while(abs(minspeed-maxspeed) != 1):
+        while(minspeed<=maxspeed):
             midspeed = math.floor((minspeed+maxspeed)/2.)
             print(minspeed, maxspeed, midspeed)
             time_total = time(midspeed)
             if (time_total <= hour):
-                maxspeed = midspeed
+                maxspeed = midspeed-1
                 bestMinSpeed = midspeed
             else:
-                minspeed = midspeed
-                bestMinSpeed = maxspeed
+                minspeed = midspeed+1
+                # bestMinSpeed = maxspeed
 
         print(bestMinSpeed)
         return int(bestMinSpeed)
